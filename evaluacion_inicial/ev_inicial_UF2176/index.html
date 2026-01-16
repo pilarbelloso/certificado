@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación Inicial – Lenguajes Relacionales y SQL</title>
+
+    <style>
+        :root {
+            --apple-bg: #f5f5f7;
+            --apple-card: #ffffff;
+            --apple-text: #1d1d1f;
+            --apple-subtle: #86868b;
+            --apple-accent: #0071e3;
+            --apple-border: #d2d2d7;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: var(--apple-bg);
+            color: var(--apple-text);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        p.intro {
+            color: var(--apple-subtle);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--apple-card);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid var(--apple-border);
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid var(--apple-border);
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--apple-accent);
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        button {
+            background: var(--apple-accent);
+            color: white;
+            border: none;
+            border-radius: 999px;
+            padding: 14px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005bb5;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Evaluación Inicial – Lenguajes Relacionales y SQL</h1>
+    <p class="intro">
+        Responde con tus propias palabras. Esta prueba no tiene calificación y
+        sirve únicamente para conocer tu punto de partida antes de comenzar el módulo.
+    </p>
+
+    <!-- Datos personales -->
+    <h2>Datos del alumno/a</h2>
+
+    <div class="card">
+        <label>Nombre y apellidos</label>
+        <input type="text">
+
+        <label>Dirección</label>
+        <input type="text">
+
+        <label>Teléfono</label>
+        <input type="tel">
+
+        <label>Correo electrónico</label>
+        <input type="email">
+
+        <label>Fecha</label>
+        <input type="date">
+
+        <label>Estudios realizados</label>
+        <textarea placeholder="ESO, Bachillerato, FP, universidad, certificados, etc."></textarea>
+
+        <label>Experiencia previa con SQL o bases de datos (si la hay)</label>
+        <textarea placeholder="Herramientas, asignaturas, trabajo, proyectos personales…"></textarea>
+    </div>
+
+    <!-- 1. Lenguajes relacionales -->
+    <h2>1. Lenguajes relacionales</h2>
+
+    <div class="card">
+        <label>¿Qué entiendes por lenguaje relacional?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Qué tipos de lenguajes relacionales conoces?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Para qué sirve el álgebra relacional?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>Nombra y explica brevemente alguna operación del álgebra relacional.</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Has oído hablar del cálculo relacional? ¿En qué se diferencia del álgebra relacional?</label>
+        <textarea></textarea>
+    </div>
+
+    <!-- 2. SQL y lenguajes comerciales -->
+    <h2>2. SQL y lenguajes comerciales</h2>
+
+    <div class="card">
+        <label>¿Qué es SQL y para qué se utiliza?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>Indica con qué SGBD has trabajado o has oído hablar.</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Qué características destacarías del lenguaje SQL?</label>
+        <textarea></textarea>
+    </div>
+
+    <!-- 3. Lenguajes DDL y DML -->
+    <h2>3. Lenguaje de definición y manipulación de datos</h2>
+
+    <div class="card">
+        <label>¿Qué diferencia hay entre DDL y DML?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>Indica qué sentencias SQL conoces para crear o modificar tablas.</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>Explica cómo se realiza una consulta SELECT sencilla.</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Has utilizado alguna vez JOIN o subconsultas? Explica para qué sirven.</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Qué son las funciones agregadas?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Cómo se tratan los valores NULL en SQL?</label>
+        <textarea></textarea>
+    </div>
+
+    <!-- 4. Transacciones y control -->
+    <h2>4. Transacciones y control de datos</h2>
+
+    <div class="card">
+        <label>¿Qué es una transacción?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Qué significan las propiedades ACID?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Qué sentencias conoces para controlar transacciones?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Qué son los privilegios y para qué sirven?</label>
+        <textarea></textarea>
+    </div>
+
+    <!-- 5. Procesamiento y optimización -->
+    <h2>5. Procesamiento y optimización de consultas</h2>
+
+    <div class="card">
+        <label>¿Qué crees que ocurre internamente cuando se ejecuta una consulta SQL?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="card">
+        <label>¿Qué es la optimización de consultas?</label>
+        <textarea></textarea>
+    </div>
+
+    <div class="actions">
+        <button onclick="window.print()">Imprimir / Guardar en PDF</button>
+    </div>
+
+</div>
+
+<script>
+    // Bloquear copiar, pegar y cortar en inputs y textarea
+    document.querySelectorAll("input, textarea").forEach(campo => {
+        campo.addEventListener("copy", e => e.preventDefault());
+        campo.addEventListener("paste", e => e.preventDefault());
+        campo.addEventListener("cut", e => e.preventDefault());
+    });
+</script>
+
+</body>
+</html>

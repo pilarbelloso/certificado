@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Actividad de Reflexión Inicial · Proyecto del Curso</title>
+
+<style>
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:#f5f5f7;
+  color:#1d1d1f;
+}
+.container{
+  max-width:900px;
+  margin:40px auto;
+  background:#ffffff;
+  padding:50px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+h1{font-size:2.2rem;margin-bottom:10px}
+h2{
+  margin-top:40px;
+  border-left:4px solid #0071e3;
+  padding-left:12px;
+}
+p{line-height:1.6}
+
+/* BLOQUES */
+.block{
+  background:#fafafa;
+  border:1px solid #e5e5e7;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:30px;
+}
+
+/* ACTIVIDAD */
+.activity{
+  display:flex;
+  gap:14px;
+  margin-bottom:10px;
+}
+.activity input{
+  appearance:none;
+  width:20px;
+  height:20px;
+  border:2px solid #0071e3;
+  border-radius:6px;
+  margin-top:4px;
+}
+.activity input:checked{
+  background:#0071e3;
+}
+.activity input:checked::after{
+  content:"✓";
+  color:white;
+  position:relative;
+  left:4px;
+  top:-1px;
+}
+.activity label{font-weight:500}
+
+/* ENLACES */
+.material{
+  margin-left:34px;
+  margin-bottom:12px;
+}
+.material a{
+  color:#0071e3;
+  font-weight:600;
+  text-decoration:none;
+}
+.material a:hover{text-decoration:underline}
+
+/* TEXTAREA */
+textarea{
+  width:calc(100% - 34px);
+  margin-left:34px;
+  margin-bottom:25px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #d2d2d7;
+  resize:vertical;
+  font-family:inherit;
+}
+
+/* BOTÓN */
+.actions{
+  text-align:center;
+  margin-top:40px;
+}
+button{
+  background:#0071e3;
+  color:white;
+  border:none;
+  border-radius:999px;
+  padding:14px 32px;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+@media print{
+  .actions{display:none}
+  body{background:white}
+  .container{box-shadow:none;margin:0;padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Actividad de Reflexión Inicial</h1>
+<p><strong>Curso:</strong> Certificado de Profesionalidad</p>
+<p><strong>Objetivo:</strong> Expresar opiniones, expectativas y sensaciones iniciales sobre el proyecto del curso.</p>
+
+<h2>Material de referencia (Classroom)</h2>
+
+<div class="block">
+  <ul>
+    <li>
+      <a href="https://classroom.google.com/c/NzkzMTg2NTU2MDA2/m/ODM5MjU4ODk0NDMx/details" target="_blank">
+        Información certificado profesionalidad
+      </a>
+    </li>
+    <li>
+      <a href="https://classroom.google.com/c/NzkzMTg2NTU2MDA2/m/ODM5Mjg3OTA2NDMx/details" target="_blank">
+        Programación certificado profesionalidad
+      </a>
+    </li>
+    <li>
+      <a href="https://classroom.google.com/c/NzkzMTg2NTU2MDA2/m/ODM5MjY1MDQ4NDkx/details" target="_blank">
+        Presentación alumnado
+      </a>
+    </li>
+    <li>
+      <a href="https://classroom.google.com/c/NzkzMTg2NTU2MDA2/m/ODM5MjU5MDcwMDI4/details" target="_blank">
+        Coordinación Unidades Formativas
+      </a>
+    </li>
+    <li>
+      <a href="https://classroom.google.com/c/NzkzMTg2NTU2MDA2/m/ODE4ODA1MjA2MTUw/details" target="_blank">
+        Normas de trabajo
+      </a>
+    </li>
+    <li>
+      <a href="https://classroom.google.com/c/NzkzMTg2NTU2MDA2/m/ODM5MjY1MTEyNTQ0/details" target="_blank">
+        Uso responsable de la IA
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- ACTIVIDAD 1 -->
+<div class="block">
+  <div class="activity">
+    <input type="checkbox" id="c1">
+    <label for="c1">Actividad 1 · Primera impresión del curso</label>
+  </div>
+  <p class="material">
+    Tras consultar el material, explica qué te ha parecido el proyecto del curso y qué es lo que más te llama la atención.
+  </p>
+  <textarea id="t1" rows="4"></textarea>
+</div>
+
+<!-- ACTIVIDAD 2 -->
+<div class="block">
+  <div class="activity">
+    <input type="checkbox" id="c2">
+    <label for="c2">Actividad 2 · Expectativas personales</label>
+  </div>
+  <p class="material">
+    Indica qué esperas aprender a lo largo del curso y cómo crees que puede ayudarte a nivel personal o profesional.
+  </p>
+  <textarea id="t2" rows="4"></textarea>
+</div>
+
+<!-- ACTIVIDAD 3 -->
+<div class="block">
+  <div class="activity">
+    <input type="checkbox" id="c3">
+    <label for="c3">Actividad 3 · Dudas y miedos iniciales</label>
+  </div>
+  <p class="material">
+    Expresa con sinceridad qué aspectos del curso te generan más dudas o inseguridad.
+  </p>
+  <textarea id="t3" rows="4"></textarea>
+</div>
+
+<!-- ACTIVIDAD 4 -->
+<div class="block">
+  <div class="activity">
+    <input type="checkbox" id="c4">
+    <label for="c4">Actividad 4 · Motivación e implicación</label>
+  </div>
+  <p class="material">
+    Explica qué te motiva a realizar este certificado y qué crees que puedes aportar tú al grupo.
+  </p>
+  <textarea id="t4" rows="4"></textarea>
+</div>
+
+<!-- ACTIVIDAD 5 -->
+<div class="block">
+  <div class="activity">
+    <input type="checkbox" id="c5">
+    <label for="c5">Actividad 5 · Compromiso personal</label>
+  </div>
+  <p class="material">
+    Redacta un breve compromiso personal sobre cómo te gustaría afrontar el curso.
+  </p>
+  <textarea id="t5" rows="3"></textarea>
+</div>
+
+<div class="actions">
+  <button onclick="window.print()">Imprimir / Guardar en PDF</button>
+</div>
+
+</div>
+
+<script>
+/* GUARDADO AUTOMÁTICO */
+function guardar(){
+  document.querySelectorAll('textarea').forEach(t=>{
+    localStorage.setItem(t.id, t.value);
+  });
+  document.querySelectorAll('input[type=checkbox]').forEach(c=>{
+    localStorage.setItem(c.id, c.checked);
+  });
+}
+function cargar(){
+  document.querySelectorAll('textarea').forEach(t=>{
+    if(localStorage.getItem(t.id)) t.value = localStorage.getItem(t.id);
+  });
+  document.querySelectorAll('input[type=checkbox]').forEach(c=>{
+    if(localStorage.getItem(c.id)) c.checked = (localStorage.getItem(c.id)==='true');
+  });
+}
+document.addEventListener('input', guardar);
+document.addEventListener('change', guardar);
+window.addEventListener('load', cargar);
+
+/* BLOQUEO COPIAR / PEGAR */
+document.addEventListener('copy',e=>e.preventDefault());
+document.addEventListener('paste',e=>e.preventDefault());
+document.addEventListener('cut',e=>e.preventDefault());
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey||e.metaKey)e.preventDefault();
+});
+</script>
+
+</body>
+</html>
