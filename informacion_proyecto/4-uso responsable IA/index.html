@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Uso responsable de la Inteligencia Artificial</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.65;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+nav {
+  background: #ffffff;
+  border-right: 1px solid #e5e5e7;
+  padding: 2rem 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+nav h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+nav ul { list-style: none; }
+nav li { margin-bottom: 0.6rem; }
+
+nav a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+nav a:hover { opacity: 1; }
+
+main {
+  padding: 4rem 6rem;
+  max-width: 1100px;
+}
+
+/* ===== SECCIONES ===== */
+section { margin-bottom: 4rem; }
+
+.section-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 16px;
+  padding: 2.5rem 3rem;
+}
+
+/* ===== TÍTULOS ===== */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-header svg {
+  width: 28px;
+  height: 28px;
+  stroke: #0071e3;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ===== TEXTO ===== */
+p { max-width: 80ch; margin-bottom: 1rem; }
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li { margin-bottom: 0.4rem; }
+
+/* ===== CAJAS ===== */
+.box {
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  background: #f9f9fb;
+  border-left: 4px solid;
+}
+
+.important { border-color: #0071e3; }
+.warning   { border-color: #ff9f0a; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  nav {
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e7;
+  }
+  main { padding: 2rem; }
+}
+</style>
+</head>
+
+<body>
+<div class="layout">
+
+<nav>
+  <h1>Uso responsable IA</h1>
+  <ul>
+    <li><a href="#intro">Introducción</a></li>
+    <li><a href="#contexto">Contexto profesional</a></li>
+    <li><a href="#aprendizaje">IA y aprendizaje</a></li>
+    <li><a href="#responsabilidad">Responsabilidad</a></li>
+    <li><a href="#evaluacion">IA y evaluación</a></li>
+    <li><a href="#etica">Transparencia y ética</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="intro">
+  <div class="section-card">
+    <div class="section-header">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h10" stroke-width="2"/>
+      </svg>
+      <h2>Introducción</h2>
+    </div>
+
+    <p>
+      La Inteligencia Artificial es una herramienta habitual en los entornos
+      profesionales del sector TIC.
+    </p>
+
+    <p>
+      En este módulo formativo se permite su uso con el objetivo de acercar al
+      alumnado a la realidad laboral, fomentando un uso responsable, crítico y
+      ético.
+    </p>
+
+    <div class="box important">
+      <strong>En resumen:</strong>
+      <ul style="margin-top:0.5rem">
+        <li>La IA es una herramienta de apoyo</li>
+        <li>No sustituye al razonamiento</li>
+        <li>La responsabilidad final es del alumno o alumna</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contexto">
+  <div class="section-card">
+    <div class="section-header">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z" stroke-width="2"/>
+      </svg>
+      <h2>Contexto profesional del uso de IA</h2>
+    </div>
+
+    <p>
+      En el sector tecnológico actual, la Inteligencia Artificial se utiliza de
+      forma habitual para apoyar tareas como el análisis, el diseño, la
+      programación o la documentación.
+    </p>
+
+    <p>
+      El uso de IA en este curso responde a la necesidad de que el alumnado conozca
+      y practique con herramientas que encontrará en su futuro profesional.
+    </p>
+  </div>
+</section>
+
+<section id="aprendizaje">
+  <div class="section-card">
+    <div class="section-header">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z" stroke-width="2"/>
+      </svg>
+      <h2>La IA como apoyo al aprendizaje</h2>
+    </div>
+
+    <!-- DIAGRAMA VISUAL -->
+    <div style="display:flex; justify-content:center; margin:2rem 0 3rem">
+      <svg width="520" height="120" viewBox="0 0 520 120">
+        <rect x="10" y="40" width="150" height="50" rx="12" fill="#f5f5f7" stroke="#0071e3"/>
+        <text x="85" y="70" text-anchor="middle" font-size="13">Alumno/a</text>
+
+        <line x1="160" y1="65" x2="260" y2="65" stroke="#0071e3" stroke-width="2"/>
+
+        <rect x="260" y="40" width="150" height="50" rx="12" fill="#f5f5f7" stroke="#0071e3"/>
+        <text x="335" y="70" text-anchor="middle" font-size="13">IA (apoyo)</text>
+
+        <line x1="410" y1="65" x2="490" y2="65" stroke="#0071e3" stroke-width="2"/>
+
+        <text x="500" y="70" font-size="13">✔</text>
+      </svg>
+    </div>
+
+    <p>
+      La Inteligencia Artificial puede utilizarse como apoyo para:
+    </p>
+
+    <ul>
+      <li>Generar propuestas iniciales.</li>
+      <li>Resolver dudas técnicas.</li>
+      <li>Analizar alternativas de diseño.</li>
+      <li>Apoyar la elaboración de documentación.</li>
+    </ul>
+
+    <div class="box important">
+      En todos los casos, es obligatorio revisar y entender los resultados
+      obtenidos.
+    </div>
+  </div>
+</section>
+
+<section id="responsabilidad">
+  <div class="section-card">
+    <div class="section-header">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M12 4v16M4 12h16" stroke-width="2"/>
+      </svg>
+      <h2>Responsabilidad del alumnado</h2>
+    </div>
+
+    <p>
+      El uso de Inteligencia Artificial no exime de responsabilidad sobre el
+      trabajo entregado.
+    </p>
+
+    <p>El alumnado es responsable de:</p>
+
+    <ul>
+      <li>Entender completamente el trabajo que entrega.</li>
+      <li>Detectar errores o incoherencias.</li>
+      <li>Justificar técnicamente las decisiones adoptadas.</li>
+    </ul>
+
+    <div class="box warning">
+      Si no se demuestra comprensión del trabajo, podrá penalizarse aunque el
+      resultado funcione.
+    </div>
+  </div>
+</section>
+
+<section id="evaluacion">
+  <div class="section-card">
+    <div class="section-header">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M6 6l12 12M6 18L18 6" stroke-width="2"/>
+      </svg>
+      <h2>Relación entre IA y evaluación</h2>
+    </div>
+
+    <p>
+      El uso de Inteligencia Artificial no penaliza ni mejora directamente la
+      calificación.
+    </p>
+
+    <p>
+      La evaluación se basa en la comprensión, la corrección técnica y la capacidad
+      de razonamiento del alumnado.
+    </p>
+
+    <div class="box important">
+      El profesorado podrá realizar preguntas o pruebas adicionales para comprobar
+      la autoría y la comprensión del trabajo.
+    </div>
+  </div>
+</section>
+
+<section id="etica">
+  <div class="section-card">
+    <div class="section-header">
+      <svg fill="none" viewBox="0 0 24 24">
+        <path d="M4 20h16M12 4v16" stroke-width="2"/>
+      </svg>
+      <h2>Transparencia y ética</h2>
+    </div>
+
+    <p>
+      Se espera un uso transparente y ético de la Inteligencia Artificial.
+    </p>
+
+    <p>
+      El alumnado deberá indicar cuándo se ha apoyado en herramientas de IA y con
+      qué finalidad se han utilizado.
+    </p>
+  </div>
+</section>
+
+</main>
+</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(anchor.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
