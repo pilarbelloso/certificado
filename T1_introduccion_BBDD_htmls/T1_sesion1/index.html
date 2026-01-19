@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía de trabajo · Tema 1 · Introducción a las Bases de Datos</title>
+
+<style>
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:#f2f2f7;
+  color:#1d1d1f;
+}
+.container{
+  max-width:960px;
+  margin:40px auto;
+  background:#ffffff;
+  padding:52px;
+  border-radius:22px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+h1{font-size:2.5rem;margin-bottom:6px}
+.subtitle{color:#6e6e73;margin-bottom:36px}
+.section{
+  background:#fafafa;
+  border:1px solid #e5e5e7;
+  border-radius:18px;
+  padding:26px;
+  margin-bottom:36px;
+}
+.step{
+  display:flex;
+  gap:16px;
+  margin-bottom:12px;
+}
+.step input{
+  appearance:none;
+  width:24px;
+  height:24px;
+  border:2px solid #0071e3;
+  border-radius:6px;
+  margin-top:2px;
+}
+.step input:checked{background:#0071e3}
+.step input:checked::after{
+  content:"✓";
+  color:white;
+  position:relative;
+  left:6px;
+}
+.step label{font-weight:700}
+.badge{
+  margin-left:40px;
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:0.75rem;
+  font-weight:600;
+  margin-bottom:10px;
+}
+.grupo{background:#e8f0ff;color:#003eaa}
+.individual{background:#eafaf1;color:#1f7a46}
+.helper{
+  margin-left:40px;
+  font-size:0.95rem;
+  color:#555;
+  margin-bottom:10px;
+  line-height:1.5;
+}
+.objetivo{
+  margin-left:40px;
+  background:#eef5ff;
+  border-left:4px solid #0071e3;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:0.9rem;
+  margin-bottom:14px;
+}
+.game{
+  margin-left:40px;
+  background:#f0fff4;
+  border-left:4px solid #34c759;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:0.9rem;
+  margin-bottom:16px;
+}
+.warn{
+  margin-left:40px;
+  background:#fff4e5;
+  border-left:4px solid #ff9f0a;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:0.9rem;
+  margin-bottom:16px;
+}
+textarea{
+  width:calc(100% - 40px);
+  margin-left:40px;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #d2d2d7;
+  resize:vertical;
+  font-family:inherit;
+}
+.actions{text-align:center;margin-top:60px}
+button{
+  background:#0071e3;
+  color:white;
+  border:none;
+  border-radius:999px;
+  padding:14px 40px;
+  cursor:pointer;
+}
+@media print{
+  .actions{display:none}
+  body{background:white}
+  .container{box-shadow:none;margin:0;padding:24px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Tema 1 · Introducción a las Bases de Datos</h1>
+<p class="subtitle">Sesión 1 · Diagnóstico y primeros conceptos</p>
+
+<!-- ACTIVIDAD 1 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="act1">
+<label for="act1">Actividad nº 1 · Kahoot diagnóstico</label>
+</div>
+
+<span class="badge grupo">Trabajo en grupo</span>
+
+<div class="helper">
+Participa en el Kahoot para mostrar qué ideas previas tienes sobre las bases de datos.
+</div>
+
+<div class="objetivo">
+🎯 <strong>Objetivo:</strong> detectar conocimientos previos antes de empezar el tema.
+</div>
+
+<div class="game">
+🎮 Accede al Kahoot desde:<br>
+<a href="https://iesjulianzarco.es/guardias/zarhoot/player.php" target="_blank">
+https://iesjulianzarco.es/guardias/zarhoot/player.php
+</a><br><br>
+🔑 El PIN se facilitará en clase.
+</div>
+
+<textarea rows="3"
+placeholder="Después del Kahoot: ¿qué preguntas te han resultado más difíciles o sorprendentes?">
+</textarea>
+</div>
+
+<!-- ACTIVIDAD 2 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="act2">
+<label for="act2">Actividad nº 2 · El problema de gestionar información</label>
+</div>
+
+<span class="badge grupo">Trabajo en grupo</span>
+
+<div class="helper">
+En grupo, pensad en una situación real donde se gestione mucha información.
+</div>
+
+<div class="objetivo">
+🎯 <strong>Objetivo:</strong> tomar conciencia de la complejidad de gestionar información sin sistemas adecuados.
+</div>
+
+<textarea rows="4"
+placeholder="Describe la situación elegida y explica por qué gestionar esa información puede ser complicado.">
+</textarea>
+</div>
+
+<!-- ACTIVIDAD 3 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="act3">
+<label for="act3">Actividad nº 3 · Dato vs Información</label>
+</div>
+
+<span class="badge individual">Trabajo individual</span>
+
+<div class="helper">
+Usa el ejemplo anterior para diferenciar claramente dato e información.
+</div>
+
+<div class="objetivo">
+🎯 <strong>Objetivo:</strong> comprender la diferencia entre datos e información.
+</div>
+
+<p><strong>¿Qué serían los datos?</strong></p>
+<textarea rows="3"
+placeholder="Valores sueltos, registros, números o textos sin interpretar.">
+</textarea>
+
+<p><strong>¿Qué sería la información?</strong></p>
+<textarea rows="3"
+placeholder="Resultado de organizar o procesar esos datos.">
+</textarea>
+
+<p><strong>¿Qué proceso transforma los datos en información?</strong></p>
+<textarea rows="3"
+placeholder="Ordenar, calcular, agrupar, comparar, resumir…">
+</textarea>
+</div>
+
+<!-- ACTIVIDAD 4 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="act4">
+<label for="act4">Actividad nº 4 · Sistemas basados en ficheros</label>
+</div>
+
+<span class="badge grupo">Trabajo en grupo</span>
+
+<div class="helper">
+Imaginad que la información se guarda en varios ficheros independientes.
+</div>
+
+<div class="objetivo">
+🎯 <strong>Objetivo:</strong> identificar las limitaciones de los sistemas basados en ficheros.
+</div>
+
+<textarea rows="4"
+placeholder="Explica qué problemas aparecen (duplicidad, errores, dificultad de actualización, desorganización…).">
+</textarea>
+</div>
+
+<!-- ACTIVIDAD 5 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="act5">
+<label for="act5">Actividad nº 5 · Problemas de los datos mal gestionados</label>
+</div>
+
+<span class="badge grupo">Trabajo en grupo</span>
+
+<div class="helper">
+Analizad las consecuencias de trabajar con datos duplicados, erróneos o incompletos.
+</div>
+
+<div class="objetivo">
+🎯 <strong>Objetivo:</strong> comprender la importancia de la calidad y coherencia de los datos.
+</div>
+
+<p><strong>¿Qué problemas provoca?</strong></p>
+<textarea rows="3"
+placeholder="Errores, confusión, pérdida de tiempo, malas decisiones…">
+</textarea>
+
+<p><strong>¿A quién afecta?</strong></p>
+<textarea rows="3"
+placeholder="Usuarios, empresa, clientes, trabajadores…">
+</textarea>
+
+<p><strong>¿Qué consecuencias puede tener a largo plazo?</strong></p>
+<textarea rows="3"
+placeholder="Costes, mala organización, pérdida de confianza…">
+</textarea>
+</div>
+
+<!-- ACTIVIDAD 6 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="act6">
+<label for="act6">Actividad nº 6 · Aparición de las bases de datos</label>
+</div>
+
+<span class="badge individual">Trabajo individual</span>
+
+<div class="helper">
+Relaciona todos los problemas anteriores con la necesidad de crear bases de datos.
+</div>
+
+<div class="objetivo">
+🎯 <strong>Objetivo:</strong> entender por qué surgen las bases de datos como solución.
+</div>
+
+<textarea rows="4"
+placeholder="Explica por qué aparecen las bases de datos y qué problemas vienen a solucionar.">
+</textarea>
+</div>
+
+<!-- ACTIVIDAD 7 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="act7">
+<label for="act7">Actividad nº 7 · Portfolio · Reflexión personal</label>
+</div>
+
+<span class="badge individual">Trabajo individual</span>
+
+<div class="objetivo">
+🎯 <strong>Objetivo:</strong> reflexionar sobre lo aprendido en la sesión.
+</div>
+
+<div class="warn">
+🚨 No contestes con una sola frase. Justifica tus respuestas.
+</div>
+
+<p><strong>¿Qué concepto te ha quedado más claro hoy?</strong></p>
+<textarea rows="3"
+placeholder="Indica el concepto y explica por qué ahora lo entiendes mejor.">
+</textarea>
+
+<p><strong>¿Qué parte te ha resultado más difícil?</strong></p>
+<textarea rows="3"
+placeholder="Explica qué te ha costado y por qué.">
+</textarea>
+
+<p><strong>¿Qué ideas nuevas te llevas sobre las bases de datos?</strong></p>
+<textarea rows="3"
+placeholder="Algo que no sabías antes de esta sesión.">
+</textarea>
+</div>
+
+<div class="actions">
+<button onclick="window.print()">Imprimir / Guardar en PDF</button>
+</div>
+
+</div>
+
+<script>
+function save(){
+  document.querySelectorAll('textarea').forEach((t,i)=>localStorage.setItem("s1t"+i,t.value));
+  document.querySelectorAll('input[type=checkbox]').forEach(c=>localStorage.setItem(c.id,c.checked));
+}
+function load(){
+  document.querySelectorAll('textarea').forEach((t,i)=>{
+    if(localStorage.getItem("s1t"+i)) t.value = localStorage.getItem("s1t"+i);
+  });
+  document.querySelectorAll('input[type=checkbox]').forEach(c=>{
+    if(localStorage.getItem(c.id)) c.checked = (localStorage.getItem(c.id)==='true');
+  });
+}
+document.addEventListener('input',save);
+document.addEventListener('change',save);
+window.addEventListener('load',load);
+
+document.addEventListener('copy',e=>e.preventDefault());
+document.addEventListener('paste',e=>e.preventDefault());
+document.addEventListener('cut',e=>e.preventDefault());
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey||e.metaKey)e.preventDefault();
+});
+</script>
+
+</body>
+</html>

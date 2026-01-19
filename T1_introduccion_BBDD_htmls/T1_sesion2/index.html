@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía para el alumnado · Sesión 2 · Tema 1 · Bases de Datos</title>
+
+<style>
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:#f2f2f7;
+  color:#1d1d1f;
+}
+.container{
+  max-width:1000px;
+  margin:40px auto;
+  background:#ffffff;
+  padding:56px;
+  border-radius:22px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* CABECERA */
+.header-top{
+  text-align:center;
+  margin-bottom:40px;
+}
+.header-top .guide{
+  font-size:1.2rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:#6e6e73;
+}
+.header-top .theme{
+  font-size:2.6rem;
+  font-weight:900;
+  margin:12px 0 6px 0;
+}
+.header-top .session{
+  font-size:1.4rem;
+  font-weight:700;
+  color:#6e6e73;
+}
+.header-top .summary{
+  font-size:1rem;
+  color:#6e6e73;
+  margin-top:6px;
+}
+
+/* SECCIONES */
+.section{
+  background:#fafafa;
+  border:1px solid #e5e5e7;
+  border-radius:18px;
+  padding:30px;
+  margin-bottom:40px;
+}
+.step{
+  display:flex;
+  gap:16px;
+  margin-bottom:14px;
+}
+.step input{
+  appearance:none;
+  width:24px;
+  height:24px;
+  border:2px solid #0071e3;
+  border-radius:6px;
+}
+.step input:checked{background:#0071e3}
+.step input:checked::after{
+  content:"✓";
+  color:white;
+  position:relative;
+  left:6px;
+}
+.step label{font-weight:700}
+.badge{
+  margin-left:40px;
+  display:inline-block;
+  padding:4px 12px;
+  border-radius:999px;
+  font-size:0.75rem;
+  font-weight:700;
+  margin-bottom:12px;
+}
+.grupo{background:#e8f0ff;color:#003eaa}
+.individual{background:#eafaf1;color:#1f7a46}
+.evaluable{background:#fff4e5;color:#8a4b00}
+.helper{
+  margin-left:40px;
+  font-size:0.95rem;
+  color:#555;
+  margin-bottom:10px;
+}
+.objetivo{
+  margin-left:40px;
+  background:#eef5ff;
+  border-left:4px solid #0071e3;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:0.9rem;
+  margin-bottom:16px;
+}
+.warn{
+  margin-left:40px;
+  background:#fff4e5;
+  border-left:4px solid #ff9f0a;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:0.9rem;
+  margin-bottom:16px;
+}
+.game{
+  margin-left:40px;
+  background:#f0fff4;
+  border-left:4px solid #34c759;
+  padding:12px 16px;
+  border-radius:10px;
+  font-size:0.9rem;
+  margin-bottom:16px;
+}
+textarea{
+  width:calc(100% - 40px);
+  margin-left:40px;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #d2d2d7;
+  resize:vertical;
+  font-family:inherit;
+}
+.actions{text-align:center;margin-top:60px}
+button{
+  background:#0071e3;
+  color:white;
+  border:none;
+  border-radius:999px;
+  padding:14px 44px;
+  font-size:1rem;
+  cursor:pointer;
+}
+@media print{
+  .actions{display:none}
+  body{background:white}
+  .container{box-shadow:none;margin:0;padding:28px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- CABECERA -->
+<div class="header-top">
+  <div class="guide">GUÍA PARA EL ALUMNADO</div>
+  <div class="theme">Tema 1 · Introducción a las Bases de Datos</div>
+  <div class="session">Sesión 2</div>
+  <div class="summary">SGBD, modelos de datos, arquitectura y cierre del Tema 1</div>
+</div>
+
+<!-- OBJETIVO -->
+<div class="section">
+<h2>🎯 Objetivo de la sesión</h2>
+<p>
+Comprender cómo funcionan los sistemas gestores de bases de datos, cómo se clasifican
+y cómo se organizan internamente, cerrando el Tema 1 con una visión global.
+</p>
+</div>
+
+<!-- ACTIVIDAD 1 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a1">
+<label for="a1">Actividad 1 · Repaso de la sesión anterior</label>
+</div>
+<span class="badge grupo">Trabajo en grupo</span>
+<div class="helper">
+En grupo, repasad los conceptos clave vistos en la sesión 1 antes de avanzar.
+</div>
+<div class="objetivo">
+🎯 Activar conocimientos previos.
+</div>
+<textarea rows="4" placeholder="Anotad conceptos importantes de la sesión 1 y dudas pendientes."></textarea>
+</div>
+
+<!-- ACTIVIDAD 2 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a2">
+<label for="a2">Actividad 2 · Base de datos, SGBD y aplicación</label>
+</div>
+<span class="badge individual">Trabajo individual</span>
+<div class="objetivo">
+🎯 Diferenciar conceptos fundamentales.
+</div>
+<textarea rows="4" placeholder="Explica qué es una base de datos, qué es un SGBD y qué es una aplicación."></textarea>
+<textarea rows="3" placeholder="Pon un ejemplo real donde aparezcan los tres."></textarea>
+</div>
+
+<!-- ACTIVIDAD 3 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a3">
+<label for="a3">Actividad 3 · Componentes de un SGBD</label>
+</div>
+<span class="badge grupo">Trabajo en grupo</span>
+<div class="helper">
+Identificad los principales componentes de un SGBD.
+</div>
+<div class="objetivo">
+🎯 Entender que un SGBD es un sistema complejo.
+</div>
+<textarea rows="4" placeholder="Indicad los componentes y explicad la función de cada uno."></textarea>
+</div>
+
+<!-- ACTIVIDAD 4 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a4">
+<label for="a4">Actividad 4 · Tipos de SGBD según el modelo de datos</label>
+</div>
+<span class="badge individual">Trabajo individual</span>
+<div class="objetivo">
+🎯 Conocer los distintos modelos de datos.
+</div>
+<textarea rows="4" placeholder="Enumera los tipos de SGBD según el modelo de datos y explica brevemente cada uno."></textarea>
+</div>
+
+<!-- ACTIVIDAD 5 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a5">
+<label for="a5">Actividad 5 · ¿Por qué triunfa el modelo relacional?</label>
+</div>
+<span class="badge grupo">Trabajo en grupo</span>
+<div class="helper">
+Reflexionad y razonad, no memoricéis definiciones.
+</div>
+<div class="objetivo">
+🎯 Justificar el predominio del modelo relacional.
+</div>
+<textarea rows="4" placeholder="Explicad por qué el modelo relacional es el más utilizado frente a otros."></textarea>
+</div>
+
+<!-- ACTIVIDAD 6 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a6">
+<label for="a6">Actividad 6 · Tipos de SGBD según el uso</label>
+</div>
+<span class="badge individual">Trabajo individual</span>
+<div class="objetivo">
+🎯 Relacionar tipos de SGBD con contextos reales.
+</div>
+<textarea rows="4" placeholder="Explica las diferencias entre SGBD centralizado, distribuido y cliente-servidor."></textarea>
+</div>
+
+<!-- ACTIVIDAD 7 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a7">
+<label for="a7">Actividad 7 · Arquitectura en tres niveles</label>
+</div>
+<span class="badge grupo">Trabajo en grupo</span>
+<div class="objetivo">
+🎯 Comprender la separación de niveles.
+</div>
+<textarea rows="4" placeholder="Explicad qué representa cada nivel y por qué es útil esta separación."></textarea>
+</div>
+
+<!-- ACTIVIDAD 8 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a8">
+<label for="a8">Actividad 8 · Arquitectura y usuarios</label>
+</div>
+<span class="badge grupo">Trabajo en grupo</span>
+<div class="objetivo">
+🎯 Relacionar niveles con roles de usuario.
+</div>
+<textarea rows="4" placeholder="Relacionad cada nivel con los usuarios que lo utilizan y sus tareas."></textarea>
+</div>
+
+<!-- ACTIVIDAD 9 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a9">
+<label for="a9">Actividad 9 · Kahoot evaluable</label>
+</div>
+<span class="badge grupo">Actividad evaluable</span>
+<div class="game">
+🎮 Acceso al Kahoot:<br>
+<a href="https://iesjulianzarco.es/guardias/zarhoot/player.php" target="_blank">
+https://iesjulianzarco.es/guardias/zarhoot/player.php
+</a><br><br>
+🔑 El PIN se facilitará en clase.
+</div>
+</div>
+
+<!-- ACTIVIDAD 10 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a10">
+<label for="a10">Actividad 10 · Razonamiento escrito</label>
+</div>
+<span class="badge individual">Trabajo individual</span>
+<span class="badge evaluable">Actividad evaluable</span>
+
+<div class="helper">
+La profesora facilitará una serie de preguntas durante la sesión.
+Deberás responderlas de forma individual y razonada.
+</div>
+
+<div class="warn">
+📤 Las respuestas deberán subirse a Classroom siguiendo las indicaciones de la profesora.
+</div>
+
+<textarea rows="4" placeholder="Escribe aquí tus respuestas antes de subirlas a Classroom."></textarea>
+</div>
+
+<!-- ACTIVIDAD 11 -->
+<div class="section">
+<div class="step">
+<input type="checkbox" id="a11">
+<label for="a11">Actividad 11 · Portfolio final del Tema 1</label>
+</div>
+
+<div class="warn">🚨 Responde con calma y justifica tus respuestas.</div>
+
+<p><strong>¿Qué conceptos del Tema 1 te han resultado más difíciles?</strong></p>
+<textarea rows="3" placeholder="Indica cuáles y por qué."></textarea>
+
+<p><strong>¿Qué has aprendido sobre las bases de datos que antes no sabías?</strong></p>
+<textarea rows="3" placeholder="Reflexiona sobre tu aprendizaje."></textarea>
+
+<p><strong>¿Cómo valoras la forma de trabajar durante el tema?</strong></p>
+<textarea rows="3" placeholder="Trabajo en grupo, actividades, ritmo, materiales…"></textarea>
+
+<p><strong>¿Qué mejorarías para los próximos temas?</strong></p>
+<textarea rows="3" placeholder="Propuestas o sugerencias."></textarea>
+</div>
+
+<div class="actions">
+<button onclick="window.print()">Imprimir / Guardar en PDF</button>
+</div>
+
+</div>
+
+<script>
+function save(){
+  document.querySelectorAll('textarea').forEach((t,i)=>localStorage.setItem("s2t"+i,t.value));
+  document.querySelectorAll('input[type=checkbox]').forEach(c=>localStorage.setItem(c.id,c.checked));
+}
+function load(){
+  document.querySelectorAll('textarea').forEach((t,i)=>{
+    if(localStorage.getItem("s2t"+i)) t.value = localStorage.getItem("s2t"+i);
+  });
+  document.querySelectorAll('input[type=checkbox]').forEach(c=>{
+    if(localStorage.getItem(c.id)) c.checked = (localStorage.getItem(c.id)==='true');
+  });
+}
+document.addEventListener('input',save);
+document.addEventListener('change',save);
+window.addEventListener('load',load);
+
+document.addEventListener('copy',e=>e.preventDefault());
+document.addEventListener('paste',e=>e.preventDefault());
+document.addEventListener('cut',e=>e.preventDefault());
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey||e.metaKey)e.preventDefault();
+});
+</script>
+
+</body>
+</html>
