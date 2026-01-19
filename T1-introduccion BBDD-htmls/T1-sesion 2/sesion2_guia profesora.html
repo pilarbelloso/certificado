@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía del profesorado · Sesión 2 · Tema 1 · Bases de Datos</title>
+
+<style>
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:#f5f5f7;
+  color:#1d1d1f;
+}
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  background:#ffffff;
+  padding:56px;
+  border-radius:22px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* CABECERA */
+.header-top{
+  text-align:center;
+  margin-bottom:48px;
+}
+.header-top .guide{
+  font-size:1.3rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  color:#6e6e73;
+}
+.header-top .theme{
+  font-size:2.6rem;
+  font-weight:900;
+  margin:12px 0 6px 0;
+}
+.header-top .session{
+  font-size:1.4rem;
+  font-weight:700;
+  color:#6e6e73;
+}
+.header-top .summary{
+  font-size:1rem;
+  color:#6e6e73;
+  margin-top:6px;
+}
+
+/* SECCIONES */
+.section{
+  background:#fafafa;
+  border:1px solid #e5e5e7;
+  border-radius:18px;
+  padding:34px;
+  margin-bottom:44px;
+}
+h2{margin-top:0}
+.block{margin-bottom:18px}
+.block strong{
+  display:block;
+  margin-bottom:6px;
+}
+.tip{
+  background:#eef5ff;
+  border-left:4px solid #0071e3;
+  padding:14px 18px;
+  border-radius:10px;
+  font-size:.95rem;
+}
+.warn{
+  background:#fff4e5;
+  border-left:4px solid #ff9f0a;
+  padding:14px 18px;
+  border-radius:10px;
+  font-size:.95rem;
+}
+.list{
+  margin-left:18px;
+}
+.time{
+  display:inline-block;
+  background:#0071e3;
+  color:white;
+  padding:6px 16px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:600;
+  margin-bottom:14px;
+}
+@media print{
+  body{background:white}
+  .container{box-shadow:none;margin:0;padding:28px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- CABECERA -->
+<div class="header-top">
+  <div class="guide">GUÍA DEL PROFESORADO</div>
+  <div class="theme">Tema 1 · Introducción a las Bases de Datos</div>
+  <div class="session">Sesión 2</div>
+  <div class="summary">SGBD, modelos de datos, arquitectura y cierre del Tema 1</div>
+</div>
+
+<!-- VISIÓN GENERAL -->
+<div class="section">
+<h2>🎯 Enfoque global de la sesión</h2>
+
+<p>
+Esta sesión tiene como objetivo pasar del <strong>por qué existen las bases de datos</strong>
+a <strong>cómo funcionan y cómo se organizan</strong>.
+</p>
+
+<ul class="list">
+  <li>Es una sesión <strong>conceptual</strong>, pero aplicada</li>
+  <li>No se busca memorización, sino <strong>comprensión estructural</strong></li>
+  <li>Prepara directamente los temas posteriores (modelo relacional, SQL, diseño)</li>
+</ul>
+
+<div class="tip">
+💡 El alumnado tiene los apuntes de Canva.  
+Tu papel es <strong>ordenar, contextualizar y dar sentido</strong>, no repetir diapositivas.
+</div>
+</div>
+
+<!-- ACTIVIDAD 1 -->
+<div class="section">
+<span class="time">15 min</span>
+<h2>Actividad 1 · Repaso de la sesión anterior</h2>
+
+<div class="block">
+<strong>Qué haces</strong>
+Formas grupos pequeños y les pides que recuerden conceptos clave de la sesión 1.
+</div>
+
+<div class="block">
+<strong>Qué escuchas</strong>
+<ul class="list">
+  <li>diferencia dato / información</li>
+  <li>problemas de los ficheros</li>
+  <li>por qué surgen las bases de datos</li>
+</ul>
+</div>
+
+<div class="warn">
+⚠️ No corrijas todo. Anota mentalmente errores para retomarlos después.
+</div>
+</div>
+
+<!-- ACTIVIDAD 2 -->
+<div class="section">
+<span class="time">20 min</span>
+<h2>Actividad 2 · Base de datos, SGBD y aplicación</h2>
+
+<div class="block">
+<strong>Qué explicas</strong>
+Aclara claramente los tres conceptos con un ejemplo único (p. ej. aplicación de notas).
+</div>
+
+<div class="block">
+<strong>Apoyo en Canva</strong>
+Diapositivas donde aparecen los conceptos de base de datos y SGBD.
+</div>
+
+<div class="tip">
+💡 Insiste: la aplicación NO es la base de datos.
+</div>
+</div>
+
+<!-- ACTIVIDAD 3 -->
+<div class="section">
+<span class="time">25 min</span>
+<h2>Actividad 3 · Componentes de un SGBD</h2>
+
+<div class="block">
+<strong>Qué explicas</strong>
+Introduce la idea de que un SGBD hace muchas tareas a la vez.
+</div>
+
+<div class="block">
+<strong>Componentes clave a mencionar</strong>
+<ul class="list">
+  <li>gestión de almacenamiento</li>
+  <li>procesador de consultas</li>
+  <li>control de concurrencia</li>
+  <li>seguridad y recuperación</li>
+</ul>
+</div>
+
+<div class="tip">
+💡 No busques terminología perfecta, sino funciones claras.
+</div>
+</div>
+
+<!-- ACTIVIDAD 4 -->
+<div class="section">
+<span class="time">20 min</span>
+<h2>Actividad 4 · Tipos de SGBD según el modelo de datos</h2>
+
+<div class="block">
+<strong>Qué explicas</strong>
+Presenta los modelos como distintas formas de organizar la información.
+</div>
+
+<div class="block">
+<strong>Modelos a tratar</strong>
+<ul class="list">
+  <li>jerárquico</li>
+  <li>en red</li>
+  <li>relacional</li>
+  <li>orientado a objetos</li>
+</ul>
+</div>
+</div>
+
+<!-- ACTIVIDAD 5 -->
+<div class="section">
+<span class="time">20 min</span>
+<h2>Actividad 5 · ¿Por qué triunfa el modelo relacional?</h2>
+
+<div class="block">
+<strong>Qué buscas</strong>
+Que razonen ventajas, no que digan “porque es el más usado”.
+</div>
+
+<div class="tip">
+💡 Este punto conecta directamente con SQL en temas posteriores.
+</div>
+</div>
+
+<!-- ACTIVIDAD 6 -->
+<div class="section">
+<span class="time">15 min</span>
+<h2>Actividad 6 · Tipos de SGBD según el uso</h2>
+
+<div class="block">
+<strong>Qué explicas</strong>
+Relaciona SGBD con tamaño, número de usuarios y entorno.
+</div>
+
+<div class="block">
+<strong>Conexión con otros módulos</strong>
+Redes, sistemas y servidores.
+</div>
+</div>
+
+<!-- ACTIVIDAD 7 y 8 -->
+<div class="section">
+<span class="time">25 min</span>
+<h2>Actividad 7 y 8 · Arquitectura en tres niveles y usuarios</h2>
+
+<div class="block">
+<strong>Qué explicas</strong>
+La separación entre:
+<ul class="list">
+  <li>nivel interno</li>
+  <li>nivel conceptual</li>
+  <li>nivel externo</li>
+</ul>
+</div>
+
+<div class="tip">
+💡 Aquí siembra la idea de independencia de datos.
+</div>
+</div>
+
+<!-- ACTIVIDAD 9 -->
+<div class="section">
+<span class="time">15 min</span>
+<h2>Actividad 9 · Kahoot evaluable</h2>
+
+<div class="block">
+<strong>Qué haces</strong>
+Realizas el Kahoot como cierre gamificado y diagnóstico.
+</div>
+
+<div class="warn">
+⚠️ No reveles respuestas largas explicaciones ahora.
+</div>
+</div>
+
+<!-- ACTIVIDAD 10 -->
+<div class="section">
+<span class="time">20 min</span>
+<h2>Actividad 10 · Razonamiento escrito (evaluable)</h2>
+
+<div class="block">
+<strong>Qué haces</strong>
+Entregas las preguntas y aclaras criterios:
+<ul class="list">
+  <li>razonamiento</li>
+  <li>coherencia</li>
+  <li>uso de conceptos</li>
+</ul>
+</div>
+
+<div class="block">
+<strong>Entrega</strong>
+Las respuestas se suben a Classroom.
+</div>
+</div>
+
+<!-- ACTIVIDAD 11 -->
+<div class="section">
+<span class="time">15 min</span>
+<h2>Actividad 11 · Portfolio final del Tema 1</h2>
+
+<div class="block">
+<strong>Qué haces</strong>
+Tiempo de reflexión individual. No se corrige en el momento.
+</div>
+
+<div class="tip">
+💡 Este portfolio te servirá para ajustar los siguientes temas.
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

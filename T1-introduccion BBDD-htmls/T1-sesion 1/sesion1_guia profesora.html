@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guía del profesorado · Sesión 1 · Tema 1 · Bases de Datos</title>
+
+<style>
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:#f5f5f7;
+  color:#1d1d1f;
+}
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  background:#ffffff;
+  padding:56px;
+  border-radius:22px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+h1{font-size:2.6rem;margin-bottom:6px}
+.subtitle{color:#6e6e73;margin-bottom:40px}
+.section{
+  background:#fafafa;
+  border:1px solid #e5e5e7;
+  border-radius:18px;
+  padding:34px;
+  margin-bottom:44px;
+}
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+.header h2{margin:0}
+.time{
+  background:#0071e3;
+  color:white;
+  padding:6px 16px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:600;
+}
+.block{
+  margin-bottom:16px;
+}
+.block strong{
+  display:block;
+  margin-bottom:6px;
+}
+.tip{
+  background:#eef5ff;
+  border-left:4px solid #0071e3;
+  padding:14px 18px;
+  border-radius:10px;
+  font-size:.95rem;
+}
+.warn{
+  background:#fff4e5;
+  border-left:4px solid #ff9f0a;
+  padding:14px 18px;
+  border-radius:10px;
+  font-size:.95rem;
+}
+.list{
+  margin-left:18px;
+}
+@media print{
+  body{background:white}
+  .container{box-shadow:none;margin:0;padding:28px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Tema 1 · Introducción a las Bases de Datos</h1>
+<p class="subtitle">Guía del profesorado · Sesión 1 (3 horas)</p>
+
+<!-- VISIÓN GENERAL -->
+<div class="section">
+  <h2>🎯 Enfoque global de la sesión</h2>
+  <p>
+    Esta sesión no pretende que el alumnado “sepa bases de datos”, sino que:
+  </p>
+  <ul class="list">
+    <li>tome conciencia del <strong>problema de gestionar información</strong></li>
+    <li>diferencie claramente <strong>dato</strong> e <strong>información</strong></li>
+    <li>detecte los <strong>límites de los sistemas basados en ficheros</strong></li>
+    <li>entienda <strong>por qué surgen las bases de datos</strong></li>
+  </ul>
+  <p>
+    Los <strong>apuntes de Canva</strong> sirven como apoyo visual y referencia,
+    pero el aprendizaje se construye a través de las actividades.
+  </p>
+</div>
+
+<!-- ACTIVIDAD 1 -->
+<div class="section">
+  <div class="header">
+    <h2>Actividad nº 1 · Kahoot diagnóstico</h2>
+    <span class="time">15 min</span>
+  </div>
+
+  <div class="block">
+    <strong>Qué explicas antes</strong>
+    Explica que el Kahoot sirve para ver ideas previas, no para evaluar.
+    Indica que no pasa nada por fallar.
+  </div>
+
+  <div class="block">
+    <strong>Durante la actividad</strong>
+    Observa preguntas conflictivas. No corrijas aún conceptos erróneos:
+    reaparecerán más adelante.
+  </div>
+
+  <div class="block">
+    <strong>Relación con los apuntes</strong>
+    No abras todavía Canva. El Kahoot va antes de cualquier teoría.
+  </div>
+
+  <div class="tip">
+    💡 Guarda mentalmente respuestas erróneas típicas para retomarlas al final.
+  </div>
+</div>
+
+<!-- ACTIVIDAD 2 -->
+<div class="section">
+  <div class="header">
+    <h2>Actividad nº 2 · El problema de gestionar información</h2>
+    <span class="time">20 min</span>
+  </div>
+
+  <div class="block">
+    <strong>Qué explicas</strong>
+    Introduce la idea de que <em>todas las organizaciones gestionan información</em>.
+    No hables aún de bases de datos.
+  </div>
+
+  <div class="block">
+    <strong>Apoyo en Canva</strong>
+    Muestra la diapositiva donde aparece el concepto de información y su importancia.
+  </div>
+
+  <div class="block">
+    <strong>Qué buscar en las respuestas</strong>
+    <ul class="list">
+      <li>volumen de información</li>
+      <li>personas distintas usando los datos</li>
+      <li>necesidad de organización</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ACTIVIDAD 3 -->
+<div class="section">
+  <div class="header">
+    <h2>Actividad nº 3 · Dato vs Información</h2>
+    <span class="time">25 min</span>
+  </div>
+
+  <div class="block">
+    <strong>Qué explicas</strong>
+    Explica claramente la diferencia entre dato e información usando un ejemplo común
+    (notas, clientes, productos…).
+  </div>
+
+  <div class="block">
+    <strong>Apoyo en Canva</strong>
+    Diapositivas de:
+    <ul class="list">
+      <li>definición de dato</li>
+      <li>definición de información</li>
+      <li>proceso de transformación</li>
+    </ul>
+  </div>
+
+  <div class="warn">
+    ⚠️ Error frecuente: pensar que un dato ya es información.
+  </div>
+</div>
+
+<!-- ACTIVIDAD 4 -->
+<div class="section">
+  <div class="header">
+    <h2>Actividad nº 4 · Sistemas basados en ficheros</h2>
+    <span class="time">20 min</span>
+  </div>
+
+  <div class="block">
+    <strong>Qué explicas</strong>
+    Introduce qué es un sistema basado en ficheros, sin entrar aún en bases de datos.
+  </div>
+
+  <div class="block">
+    <strong>Apoyo en Canva</strong>
+    Diapositiva sobre:
+    <ul class="list">
+      <li>ficheros independientes</li>
+      <li>ausencia de control centralizado</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <strong>Qué destacar verbalmente</strong>
+    “No es que esté mal, es que no escala”.
+  </div>
+</div>
+
+<!-- ACTIVIDAD 5 -->
+<div class="section">
+  <div class="header">
+    <h2>Actividad nº 5 · Problemas de los datos mal gestionados</h2>
+    <span class="time">25 min</span>
+  </div>
+
+  <div class="block">
+    <strong>Qué explicas</strong>
+    Relaciona errores de datos con consecuencias reales: económicas,
+    organizativas y de confianza.
+  </div>
+
+  <div class="block">
+    <strong>Apoyo en Canva</strong>
+    Diapositivas sobre:
+    <ul class="list">
+      <li>duplicidad</li>
+      <li>inconsistencias</li>
+      <li>errores de actualización</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ACTIVIDAD 6 -->
+<div class="section">
+  <div class="header">
+    <h2>Actividad nº 6 · Aparición de las bases de datos</h2>
+    <span class="time">20 min</span>
+  </div>
+
+  <div class="block">
+    <strong>Qué explicas</strong>
+    Presenta las bases de datos como <strong>respuesta a problemas reales</strong>,
+    no como un invento técnico aislado.
+  </div>
+
+  <div class="block">
+    <strong>Apoyo en Canva</strong>
+    Diapositiva donde se introduce el concepto de base de datos.
+  </div>
+
+  <div class="tip">
+    💡 Frase clave: “Las bases de datos aparecen porque los ficheros ya no son suficientes”.
+  </div>
+</div>
+
+<!-- ACTIVIDAD 7 -->
+<div class="section">
+  <div class="header">
+    <h2>Actividad nº 7 · Portfolio · Reflexión personal</h2>
+    <span class="time">15 min</span>
+  </div>
+
+  <div class="block">
+    <strong>Qué haces</strong>
+    Tiempo de silencio y reflexión. No corrijas ahora.
+  </div>
+
+  <div class="block">
+    <strong>Para qué te sirve</strong>
+    Este portfolio te da información para:
+    <ul class="list">
+      <li>ajustar ritmo</li>
+      <li>detectar dudas</li>
+      <li>conectar con la sesión 2</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
